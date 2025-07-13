@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example03", "Example03\Example03.csproj", "{07328AA1-18B5-4901-8399-A4FFF5F1FBCA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example03", "src\Example03\Example03.csproj", "{07328AA1-18B5-4901-8399-A4FFF5F1FBCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example04", "Example04\Example04.csproj", "{BE3476D6-B2CE-42EC-B50A-617A48B63DAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example04", "src\Example04\Example04.csproj", "{BE3476D6-B2CE-42EC-B50A-617A48B63DAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example05", "Example05\Example05.csproj", "{826A234E-1485-4382-ABA5-79F6CD9B7975}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example05", "src\Example05\Example05.csproj", "{826A234E-1485-4382-ABA5-79F6CD9B7975}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
