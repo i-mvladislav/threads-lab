@@ -1,5 +1,10 @@
-﻿const int rowsCount = 2;
+﻿using System.Diagnostics;
+
+const int rowsCount = 2;
 const int colsCount = 3;
+
+Stopwatch stopwatch = new Stopwatch();
+stopwatch.Start();
 
 var matrixA = new int[rowsCount, colsCount];
 var matrixB = new int[rowsCount, colsCount];
@@ -11,18 +16,16 @@ FillMatrix(matrixB);
 PrintMatrix(matrixA);
 PrintMatrix(matrixB);
 
-var workerThreads = new Thread[rowsCount * colsCount];
+var workerThreads = new Thread[rowsCount];
 
 for (var i = 0; i < workerThreads.Length; i++)
 {
+    var row = i;
     workerThreads[i] = new Thread(() =>
     {
-        for (var row = 0; row < rowsCount; row++)
+        for (var col = 0; col < colsCount; col++)
         {
-            for (var col = 0; col < colsCount; col++)
-            {
-                matrixC[row, col] = matrixA[row, col] + matrixB[row, col];
-            }
+            matrixC[row, col] = matrixA[row, col] + matrixB[row, col];
         }
     });
 }
@@ -34,6 +37,9 @@ foreach (var thread in workerThreads)
 }
 
 PrintMatrix(matrixC);
+
+stopwatch.Stop();
+Console.WriteLine($"ElapsedMilliseconds: {stopwatch.ElapsedMilliseconds}");
 
 void FillMatrix(int[,] matrix)
 {
@@ -57,4 +63,6 @@ void PrintMatrix(int[,] matrix)
         }
         Console.WriteLine();
     }
+    
+    Console.WriteLine();
 }
